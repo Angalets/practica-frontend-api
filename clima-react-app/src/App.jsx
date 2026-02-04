@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Monitor de Clima</h1>
+      <h1>Clima en Hermosillo</h1>
 
       
       {loading && (

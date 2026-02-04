@@ -73,7 +73,7 @@ button:active {
   transform: scale(0.98);
 }
 
-/* --- MANEJO DE ERRORES (Lo Inesperado) --- */
+/* --- MANEJO DE ERRORES --- */
 .error-banner {
   background-color: var(--error-bg);
   color: var(--error-text);

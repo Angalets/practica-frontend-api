@@ -12,13 +12,11 @@ export const useWeather = (lat, lon) => {
     setWeather(null);
 
     try {
-      // Simulamos un retraso para probar el Loader (Opcional, quitar en prod)
-      // await new Promise(resolve => setTimeout(resolve, 1000));
       
       const data = await fetchWeather(lat, lon);
       setWeather(data);
     } catch (err) {
-      // Aquí "traducimos" el error técnico a UX
+
       let userMessage = "Algo salió mal inesperadamente.";
       
       if (err.type === ERROR_TYPES.NETWORK) 
@@ -34,7 +32,6 @@ export const useWeather = (lat, lon) => {
     }
   };
 
-  // Cargar al montar
   useEffect(() => {
     getWeather();
   }, [lat, lon]);
